@@ -17,8 +17,6 @@ def run_game():
         list[c] = digit
         c += 1
 
-    print(list)
-
     print('4-digit Code has been set. Digits in range 1 to 8. You have 12 turns to break it.')
     
     u_input = input('Input 4 digit code: ')
