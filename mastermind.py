@@ -8,6 +8,20 @@ def run_game():
     list = []
     for i in range(4):
         list.append(random.randint(1,8))
+    
+    c = 0
+    d = 1
+    while c < 4:
+        while d < 4:
+            if list[c] == list[d]:
+                list[c] = random.randint(1,8)
+            else:
+                d += 1
+        d = 0
+        c += 1
+
+    print(list)
+
     print('4-digit Code has been set. Digits in range 1 to 8. You have 12 turns to break it.')
     
     u_input = input('Input 4 digit code: ')
@@ -29,6 +43,7 @@ def run_game():
             else:
                 control_var = False
                 continue
+
     d_c_place = 0
     d_inc_place = 0 
     turns_left = 12
