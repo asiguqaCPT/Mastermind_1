@@ -10,14 +10,11 @@ def run_game():
         list.append(random.randint(1,8))
     
     c = 0
-    d = 1
     while c < 4:
-        while d < 4:
-            if list[c] == list[d]:
-                list[c] = random.randint(1,8)
-            else:
-                d += 1
-        d = 0
+        digit = random.randint(1,8)
+        while digit in list:
+            digit = random.randint(1,8)
+        list[c] = digit
         c += 1
 
     print(list)
