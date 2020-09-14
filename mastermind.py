@@ -5,10 +5,8 @@ def run_game():
     """
     TODO: implement Mastermind code here
     """
-    list = []
-    for i in range(4):
-        list.append(random.randint(1,8))
-    
+    list = [0,0,0,0]
+        
     c = 0
     while c < 4:
         digit = random.randint(1,8)
